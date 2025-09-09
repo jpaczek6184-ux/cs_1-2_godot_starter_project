@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ccymai156a6dr"]
 
-[ext_resource type="Script" path="res://scripts/health.gd" id="1_afkrm"]
+[ext_resource type="Script" uid="uid://cobpbxq4pqorg" path="res://scripts/spike.gd" id="1_afkrm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6bce4"]
 
