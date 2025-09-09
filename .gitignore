@@ -17,3 +17,6 @@ mono_crash.*.json
 
 # Claude instructions for curriculum development
 claude_instructions.md
+
+# Lesson files for curriculum development
+lessons/
