@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://bpylfuifkdk6l"]
+
+[ext_resource type="Texture2D" uid="uid://c1qgyb1qwjh00" path="res://sprites/Tiles/items/Spike.png" id="1_pg0pt"]
+[ext_resource type="PackedScene" uid="uid://ccymai156a6dr" path="res://scenes/health.tscn" id="2_4j08g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mjjf"]
+size = Vector2(58, 53.25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_regxq"]
+atlas = ExtResource("1_pg0pt")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_78rsk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_regxq")
+}],
+"loop": true,
+"name": &"spikes",
+"speed": 5.0
+}]
+
+[node name="Spike" type="Area2D" groups=["spike"]]
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -0.625)
+shape = SubResource("RectangleShape2D_7mjjf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_78rsk")
+animation = &"spikes"
+
+[node name="Health" parent="." instance=ExtResource("2_4j08g")]
