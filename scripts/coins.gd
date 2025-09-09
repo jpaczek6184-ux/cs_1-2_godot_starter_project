@@ -2,6 +2,7 @@ extends Node
 
 
 func _on_body_entered(body):
+	pass
 	# TODO: Check if the object that touched the coin is the player
 	
 	
