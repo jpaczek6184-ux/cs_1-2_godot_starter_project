@@ -22,31 +22,18 @@ func _physics_process(_delta):
 	# - When NOTHING is pressed: returns 0.0
 	xDirection = Input.get_axis("ui_left", "ui_right")
 	
-	
-	# TODO: Print the direction to see what number we get
-	# This will help us understand what's happening
-	# Type this exactly: print("X Direction: ", xDirection)
-	
-	
 	# TODO: Get vertical input (up/down keys)  
 	# Same idea, but for up and down movement
 	yDirection = Input.get_axis("ui_up", "ui_down")
 	
-	
-	# TODO: Print the Y direction too
-	# Type this exactly: print("Y Direction: ", yDirection)
-	
-	
+
 	# TODO: Calculate X movement by multiplying direction × speed
 	# This gives us the actual pixels to move this frame
 	# If direction is 1 and speed is 300, we get 300 pixels right
 	# If direction is -1 and speed is 300, we get -300 pixels (left)
-	# Type this exactly: velocity.y = xDirection * xSpeed
 	
 	
 	# TODO: Calculate Y movement the same way
-	# Type this exactly: velocity.y = yDirection * ySpeed  
-	
 	
 	
 	# TODO: Set the player's velocity (how fast they're moving)
@@ -65,18 +52,10 @@ func _physics_process(_delta):
 	
 	
 	# TODO: Check for shooting input
-	# Use: if Input.is_action_just_pressed("ui_accept"):
-	# Then call your shoot() function
-	
 	
 	# TODO: Actually apply the movement
 	# This is a special Godot function that makes the movement happen
-	# Type this exactly: move_and_slide()
-	
-	
-	# TODO: Print confirmation that we moved
-	# Type this exactly: print("Player moved!")
-
+	move_and_slide()
 
 # TODO: Create animation function (add this outside of _physics_process)
 func update_animation():

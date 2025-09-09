@@ -1,6 +1,5 @@
-[gd_scene load_steps=64 format=4 uid="uid://def2efafh1llv"]
+[gd_scene load_steps=61 format=4 uid="uid://def2efafh1llv"]
 
-[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_nots6"]
 [ext_resource type="Texture2D" uid="uid://dy23vpinyhffc" path="res://sprites/Tiles/MainLev2.0.png" id="2_dhsyk"]
 [ext_resource type="Texture2D" uid="uid://dmimlbfdo7m8s" path="res://sprites/Tiles/RW_MarshLand_entrance.png" id="3_yh0u4"]
 [ext_resource type="Texture2D" uid="uid://b00prskio3o1q" path="res://sprites/Tiles/TX Tileset Grass.png" id="4_kskoe"]
@@ -10,8 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://bpylfuifkdk6l" path="res://scenes/spike.tscn" id="7_oihfm"]
 [ext_resource type="PackedScene" uid="uid://bqwd7uptu4bbq" path="res://scenes/lever.tscn" id="8_17j5i"]
 [ext_resource type="Texture2D" uid="uid://clxiycjhkoytl" path="res://sprites/Download34266.png" id="8_ejm08"]
-[ext_resource type="Script" path="res://scripts/coins_text.gd" id="8_nv0xo"]
-[ext_resource type="Script" path="res://scripts/health_text.gd" id="9_ob4nt"]
 [ext_resource type="PackedScene" uid="uid://bmjwvyc35hdqh" path="res://scenes/key.tscn" id="9_t8tki"]
 [ext_resource type="PackedScene" uid="uid://c7ppmxv7gcxjl" path="res://scenes/coin.tscn" id="9_wjn7r"]
 [ext_resource type="Texture2D" uid="uid://dsnljdmimsonc" path="res://sprites/Tiles/items/chest.png" id="10_rpv53"]
@@ -10775,7 +10772,6 @@ animations = [{
 [node name="Main" type="Node2D"]
 
 [node name="GameManager" type="Node" parent="."]
-script = ExtResource("1_nots6")
 
 [node name="Level1" type="Node" parent="."]
 
@@ -10817,14 +10813,12 @@ offset_top = -161.51
 offset_right = -237.27
 offset_bottom = -138.51
 text = "Coins: "
-script = ExtResource("8_nv0xo")
 
 [node name="HealthText" type="Label" parent="CharacterBody2D/Camera2D"]
 offset_left = -288.27
 offset_top = -137.51
 offset_right = -248.27
 offset_bottom = -114.51
-script = ExtResource("9_ob4nt")
 
 [node name="Merchant" type="CharacterBody2D" parent="."]
 position = Vector2(-301, -104)
