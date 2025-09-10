@@ -50,9 +50,6 @@ func _physics_process(_delta):
 	# TODO: Update animation based on facing direction
 	# Call your update_animation() function here
 	
-	
-	# TODO: Check for shooting input
-	
 	# TODO: Actually apply the movement
 	# This is a special Godot function that makes the movement happen
 	move_and_slide()
