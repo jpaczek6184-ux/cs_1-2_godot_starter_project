@@ -6,7 +6,8 @@ var xDirection = 0
 var facing = "down"
 var ySpeed = 300.0
 var yDirection = 0
-
+var health = 100
+var maxHealth = 99
 # TODO: Add health system variables
 # var health = ?
 # var maxHealth = ?
@@ -31,7 +32,7 @@ func _physics_process(_delta):
 	# This gives us the actual pixels to move this frame
 	# If direction is 1 and speed is 300, we get 300 pixels right
 	# If direction is -1 and speed is 300, we get -300 pixels (left)
-	
+	print("player Health: ", health)
 	
 	# TODO: Calculate Y movement the same way
 	
@@ -47,27 +48,33 @@ func _physics_process(_delta):
 	# Only update facing when actually moving (direction != 0)
 	if xDirection > 0:
 		facing = "right"
-	if xDirection < 0:
+	elif xDirection < 0:
 		facing = "left"
-	if yDirection > 0:
+	elif yDirection > 0:
 		facing = "down"
-	if yDirection < 0:
+	elif yDirection < 0:
 		facing = "up"
 	
-	print("player facing: ", facing)
+	if velocity.x == 0 and velocity.y == 0:
+		_animation_player.play("idle_" + facing)
+	else:
+		_animation_player.play("walk_" + facing)
+	
 	# TODO: Update animation based on facing direction
 	# Call your update_animation() function here
-	
+	update_animation()
 	# TODO: Actually apply the movement
 	# This is a special Godot function that makes the movement happen
 	move_and_slide()
 
 # TODO: Create animation function (add this outside of _physics_process)
 func update_animation():
+	pass
 	# TODO: Set the animation based on the facing direction
 	# Use: _animation_player.play("idle_" + facing)
 	# This combines "idle_" with whatever direction we're facing
-	_animation_player.play("idle_" + facing)
+	
+	
 	
 	
 
