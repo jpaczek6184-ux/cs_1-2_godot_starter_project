@@ -7,10 +7,21 @@ var facing = "down"
 var ySpeed = 300.0
 var yDirection = 0
 var health = 100
-var maxHealth = 99
+var maxHealth = 100
+var coins:int=0
 # TODO: Add health system variables
 # var health = ?
+
 # var maxHealth = ?
+
+func update_health(amount:int):
+	health+=amount
+	if health > maxHealth:
+		health = maxHealth
+	print("health changed by"+ str (amount))
+	print ("health is now "+ str(health))
+func update_coins(amount:int):
+	coins+=amount
 
 # TODO: Add projectile scene for shooting
 # var projectile_scene = preload("res://scenes/projectile.tscn")
@@ -21,6 +32,10 @@ func _physics_process(_delta):
 	# - When LEFT is pressed: returns -1.0
 	# - When RIGHT is pressed: returns 1.0  
 	# - When NOTHING is pressed: returns 0.0
+	
+	
+	
+	
 	xDirection = Input.get_axis("ui_left", "ui_right")
 	velocity.x = xSpeed * xDirection
 	# TODO: Get vertical input (up/down keys)  
@@ -32,7 +47,7 @@ func _physics_process(_delta):
 	# This gives us the actual pixels to move this frame
 	# If direction is 1 and speed is 300, we get 300 pixels right
 	# If direction is -1 and speed is 300, we get -300 pixels (left)
-	print("player Health: ", health)
+	#print("player Health: ", health)
 	
 	# TODO: Calculate Y movement the same way
 	
